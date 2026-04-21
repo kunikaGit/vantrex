@@ -33,8 +33,6 @@ const Header = () => {
         {/* Desktop Nav */}
         <nav className={`home3-header__nav ${isMenuOpen ? 'open' : ''}`}>
           <Link to="/" className="nav-link">Home</Link>
-          <Link to="/home2" className="nav-link">Home 2</Link>
-          <Link to="/home3" className="nav-link active">Home 3</Link>
           <Link to="/faq" className="nav-link">FAQ</Link>
           <Link to="/how-it-works" className="nav-link">How it Works</Link>
           <Link to="/about" className="nav-link">About us</Link>
