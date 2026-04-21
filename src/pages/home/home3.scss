@@ -1,0 +1,335 @@
+@use '../../assets/scss/breakpoints.scss' as bp;
+@use '../../assets/scss/variables' as v; // ← Central design tokens
+
+// ─── WRAPPER ─────────────────────────────────────────────────────
+.home3-wrapper {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  color: var(--text-primary);
+
+  .footer {
+    background-color: var(--bg-surface);
+  }
+
+  .rewards {
+    background: transparent;
+    padding: 0;
+
+    &__card {
+      background-color: var(--bg-surface);
+      border: 1px solid var(--border-gold);
+    }
+
+    .button-common .gr2 {
+      background-color: var(--gold-400);
+    }
+
+    .button-common .button-inner .text {
+      color: var(--text-primary);
+    }
+
+    &__badge {
+      background: var(--primary-dark);
+      color: var(--text-primary);
+      border: 1px solid var(--main-color);
+    }
+
+    &__step-description {
+      color: #D1D5DB;
+      font-size: 15px;
+    }
+  }
+}
+
+// ─── SECTION PADDING ─────────────────────────────────────────────
+section {
+  padding: 70px 0;
+
+  @include bp.below-md {
+    padding: 50px 0;
+  }
+
+  @include bp.below-sm {
+    padding: 40px 0;
+  }
+}
+
+// ─── VIDEO BACKGROUND ────────────────────────────────────────────
+.home3-video-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 700px;
+  z-index: -2;
+
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: #0000009d;
+    z-index: 0;
+  }
+
+  img,
+  video {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  @include bp.below-md {
+    height: 100%;
+  }
+}
+
+.home3-video-overlay {
+  position: absolute;
+  inset: 0;
+  background: var(--bg-overlay);
+  z-index: -1;
+}
+
+// ─── MAIN ────────────────────────────────────────────────────────
+.home3-main {
+  position: relative;
+  z-index: 1;
+}
+
+.home3-content {
+  text-align: center;
+  margin: 0 auto;
+  padding: 100px 20px 20px;
+
+  @include bp.below-md {
+    padding: 80px 16px 20px;
+  }
+
+  @include bp.below-sm {
+    padding: 70px 16px 20px;
+  }
+}
+
+// ─── TITLE ───────────────────────────────────────────────────────
+.home3-title {
+  font-size: 80px;
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 40px;
+  color: var(--text-primary);
+  font-family: v.$font-display;
+
+  .breaked-text {
+    display: block;
+    font-size: 60px;
+    margin-top: 8px;
+
+    @include bp.below-md {
+      font-size: 48px;
+    }
+
+
+  }
+
+  @include bp.below-2xl {
+    font-size: 60px;
+  }
+
+  @include bp.below-md {
+    font-size: 48px;
+  }
+
+
+  &-highlight {
+    @include v.gradient-text;
+  }
+}
+
+// ─── PARAGRAPH ───────────────────────────────────────────────────
+.para {
+  max-width: 80%;
+  font-size: 22px;
+  margin: 50px auto 60px;
+  color: var(--text-secondary);
+
+  @include bp.below-2xl {
+    font-size: 18px;
+    margin: 20px auto;
+  }
+
+  @include bp.below-md {
+    max-width: 95%;
+    font-size: 16px;
+  }
+
+  @include bp.below-sm {
+    max-width: 100%;
+    font-size: 15px;
+  }
+}
+
+// ─── CTA ─────────────────────────────────────────────────────────
+.cta {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  @include bp.below-sm {
+    gap: 12px;
+  }
+}
+
+.home3-cta-button {
+
+  font-weight: 500;
+  font-size: 18px;
+  padding: 16px 40px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 50px;
+  min-width: 220px;
+
+  &.bordered {
+    background: transparent;
+    border: 1px solid var(--border-gold);
+  }
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 35px rgba(var(--gradient-gold-shimmer), 0.4);
+  }
+
+  @include bp.below-md {
+    font-size: 16px;
+    padding: 14px 32px;
+  }
+
+  @include bp.below-sm {
+    font-size: 14px;
+    padding: 12px 24px;
+    letter-spacing: 0.5px;
+    margin-bottom: 10px;
+  }
+}
+
+// ─── ANIMATED TEXT SLIDER ────────────────────────────────────────
+.home3-animated-text {
+  height: 60px;
+  overflow: hidden;
+  margin-bottom: 50px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include bp.below-md {
+    height: 50px;
+    margin-bottom: 40px;
+  }
+
+  @include bp.below-sm {
+    height: 44px;
+    margin-bottom: 30px;
+  }
+}
+
+.home3-text-slider {
+  position: relative;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home3-slide-text {
+  position: absolute;
+  font-size: 24px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.9);
+  white-space: nowrap;
+  opacity: 0;
+  transform: translateY(100%);
+  animation: slideText 12s infinite;
+
+  @include bp.below-2xl {
+    font-size: 20px;
+  }
+
+  @include bp.below-md {
+    font-size: 18px;
+  }
+
+  @include bp.below-sm {
+    font-size: 15px;
+  }
+
+  &:nth-child(1) {
+    animation-delay: 0s;
+  }
+
+  &:nth-child(2) {
+    animation-delay: 3s;
+  }
+
+  &:nth-child(3) {
+    animation-delay: 6s;
+  }
+
+  &:nth-child(4) {
+    animation-delay: 9s;
+  }
+}
+
+@keyframes slideText {
+
+  0%,
+  20% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+
+  25%,
+  45% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  50%,
+  100% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+}
+
+// ─── PRICING SECTION WRAPPER ─────────────────────────────────────
+.pricing-table-section {
+  @include bp.below-md {
+    padding: 40px 0;
+  }
+}
+
+// ─── GSAP SCROLL REVEAL HELPERS ──────────────────────────────────
+.gs-hidden {
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+.gs-hidden-left {
+  opacity: 0;
+  transform: translateX(-60px);
+}
+
+.gs-hidden-right {
+  opacity: 0;
+  transform: translateX(60px);
+}
+
+.gs-hidden-scale {
+  opacity: 0;
+  transform: scale(0.92);
+}

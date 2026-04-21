@@ -1,0 +1,300 @@
+@use '../../assets/scss/breakpoints.scss' as bp;
+@use '../../assets/scss/variables' as v; // ← Central design tokens
+
+// ─── KEYFRAMES ───────────────────────────────────────────────────
+@keyframes marquee-up {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+// ─── SECTION ─────────────────────────────────────────────────────
+.testimonials-section {
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 0;
+}
+
+// ─── FADE OVERLAYS ───────────────────────────────────────────────
+.testimonials-fade {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 160px;
+  pointer-events: none;
+  z-index: 20;
+
+  &--top {
+    top: 0;
+    background: linear-gradient(to bottom, #000 0%, #000 30%, rgba(0, 0, 0, 0.76) 65%, transparent 100%);
+  }
+
+  &--bottom {
+    bottom: 0;
+    background: linear-gradient(to top, #000 0%, #000 30%, rgba(0, 0, 0, 0.76) 65%, transparent 100%);
+  }
+}
+
+// ─── INNER WRAPPER ───────────────────────────────────────────────
+.testimonials-inner {
+  position: relative;
+  z-index: 2;
+}
+
+// ─── SECTION HEADER ──────────────────────────────────────────────
+.testimonials-header {
+  text-align: center;
+  margin-bottom: 72px;
+
+  @include bp.below-md {
+    margin-bottom: 48px;
+  }
+
+  &__eyebrow {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    @include v.gradient-text;
+    margin-bottom: 20px;
+
+    &::before,
+    &::after {
+      content: '';
+      display: inline-block;
+      width: 30px;
+      height: 1px;
+      background: var(--gradient-gold-shimmer);
+      vertical-align: middle;
+      margin: 0 12px;
+    }
+  }
+
+  &__title {
+    font-family: v.$font-display;
+    font-size: 52px;
+    font-weight: 700;
+    color: var(--text-primary);
+    line-height: 1.15;
+    margin-bottom: 20px;
+
+    @include bp.below-md {
+      font-size: 36px;
+    }
+
+    @include bp.below-sm {
+      font-size: 28px;
+    }
+  }
+
+  &__highlight {
+    @include v.gradient-text;
+  }
+
+  &__subtitle {
+    font-size: 17px;
+    color: var(--text-tertiary);
+    max-width: 520px;
+    margin: 0 auto;
+    line-height: 1.7;
+
+    @include bp.below-md {
+      font-size: 15px;
+    }
+  }
+}
+
+// ─── MARQUEE GRID ────────────────────────────────────────────────
+.testimonials-marquee-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  height: 780px;
+  overflow: hidden;
+  position: relative;
+
+  @include bp.below-md {
+    grid-template-columns: 1fr;
+    height: 620px;
+
+  }
+
+  @include bp.below-sm {
+    height: 520px;
+  }
+}
+
+
+
+// ─── MARQUEE COLUMN ──────────────────────────────────────────────
+.testimonial-marquee-column {
+  overflow: hidden;
+  height: 100%;
+}
+
+.testimonial-marquee-track {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  will-change: transform;
+
+  &--up {
+    animation: marquee-up var(--marquee-speed, 40s) linear infinite;
+  }
+
+  &:hover {
+    animation-play-state: paused;
+  }
+}
+
+// ─── TESTIMONIAL CARD ────────────────────────────────────────────
+.testimonial-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-card);
+  border-radius: 18px;
+  padding: 28px 28px 24px;
+  position: relative;
+  overflow: hidden;
+  cursor: default;
+  flex-shrink: 0;
+  transition:
+    transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1),
+    background 0.35s ease,
+    border-color 0.35s ease,
+    box-shadow 0.35s ease;
+
+  @include bp.below-sm {
+    padding: 20px 18px;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: linear-gradient(135deg, rgba(var(--gradient-start), 0.06) 0%, transparent 60%);
+    opacity: 0;
+    transition: opacity 0.35s ease;
+    pointer-events: none;
+  }
+
+  &:hover {
+    background: var(--bg-elevated);
+    border-color: var(--color-border-hover);
+    box-shadow:
+      0 8px 40px rgba(var(--gradient-start), 0.2),
+      0 2px 12px rgba(0, 0, 0, 0.4),
+      inset 0 1px 0 rgba(255, 255, 255, 0.08);
+
+    &::before {
+      opacity: 1;
+    }
+
+    .testimonial-card__avatar {
+      border-color: rgba(var(--gradient-start), 0.7);
+      box-shadow: 0 0 0 3px rgba(var(--gradient-start), 0.15);
+    }
+
+    .testimonial-quote-icon path {
+      fill-opacity: 0.65;
+    }
+  }
+}
+
+// ─── QUOTE ICON ──────────────────────────────────────────────────
+.testimonial-quote-icon {
+  display: block;
+  margin-bottom: 16px;
+  transition: opacity 0.35s ease;
+
+  path {
+    transition: fill-opacity 0.35s ease;
+  }
+}
+
+// ─── STARS ───────────────────────────────────────────────────────
+.testimonial-stars {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-bottom: 14px;
+
+  svg {
+    flex-shrink: 0;
+  }
+}
+
+// ─── CARD TEXT ───────────────────────────────────────────────────
+.testimonial-card__text {
+  font-size: 14.5px;
+  line-height: 1.75;
+  color: var(--text-secondary);
+  margin: 0 0 24px;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+
+  @include bp.below-sm {
+    font-size: 13.5px;
+  }
+}
+
+// ─── CARD FOOTER ─────────────────────────────────────────────────
+.testimonial-card__footer {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+// ─── AVATAR ──────────────────────────────────────────────────────
+.testimonial-card__avatar {
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--gradient-gold-shimmer);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid rgba(255, 255, 255, 0.15);
+  transition: border-color 0.35s ease, box-shadow 0.35s ease;
+
+  span {
+    font-size: 13px;
+    font-weight: 700;
+    color: #000;
+    letter-spacing: 0.5px;
+  }
+}
+
+// ─── NAME & DESIGNATION ──────────────────────────────────────────
+.testimonial-card__info {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.testimonial-card__name {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-primary);
+  letter-spacing: 0.01em;
+}
+
+.testimonial-card__designation {
+  font-size: 12px;
+  color: var(--text-secondary);
+  font-weight: 400;
+}
+
+.marquee-column-hidden {
+    @include bp.below-sm {
+      display: none;
+  }
+}

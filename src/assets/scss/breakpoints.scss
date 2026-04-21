@@ -1,0 +1,90 @@
+// ─────────────────────────────────────────────────────────────────
+// _breakpoints.scss  —  Global Breakpoint System
+// Import this file in any SCSS component:  @use '_breakpoints' as bp;
+// Then use:  @include bp.respond-to('md') { ... }
+// ─────────────────────────────────────────────────────────────────
+
+// ── 1. Breakpoint Map ────────────────────────────────────────────
+// Key       Min-width     Typical target
+// xs        0px           Small mobile  (portrait)
+// sm        480px         Large mobile  (landscape)
+// md        768px         Tablet
+// lg        1024px        Small desktop / laptop
+// xl        1280px        Desktop
+// 2xl       1440px        Large desktop
+// 3xl       1920px        Ultra-wide
+
+$breakpoints: (
+  'xs':  0px,
+  'sm':  480px,
+  'md':  768px,
+  'lg':  1024px,
+  'xl':  1280px,
+  '2xl': 1440px,
+  '3xl': 1920px,
+) !default;
+
+// ── 2. respond-to  (min-width — mobile-first) ────────────────────
+// Usage:  @include bp.respond-to('lg') { font-size: 18px; }
+@mixin respond-to($key) {
+  $value: map-get($breakpoints, $key);
+
+  @if $value == null {
+    @warn "Unknown breakpoint: `#{$key}`. Available: #{map-keys($breakpoints)}";
+  } @else if $value == 0px {
+    @content; // xs — always applies
+  } @else {
+    @media (min-width: $value) {
+      @content;
+    }
+  }
+}
+
+// ── 3. respond-below  (max-width — desktop-first) ────────────────
+// Usage:  @include bp.respond-below('md') { display: none; }
+@mixin respond-below($key) {
+  $value: map-get($breakpoints, $key);
+
+  @if $value == null {
+    @warn "Unknown breakpoint: `#{$key}`.";
+  } @else if $value == 0px {
+    // Nothing — "below xs" is impossible
+  } @else {
+    @media (max-width: calc(#{$value} - 1px)) {
+      @content;
+    }
+  }
+}
+
+// ── 4. respond-between  (range) ──────────────────────────────────
+// Usage:  @include bp.respond-between('sm', 'lg') { ... }
+@mixin respond-between($lower, $upper) {
+  $min: map-get($breakpoints, $lower);
+  $max: map-get($breakpoints, $upper);
+
+  @if $min == null or $max == null {
+    @warn "Unknown breakpoint in range.";
+  } @else {
+    @media (min-width: $min) and (max-width: calc(#{$max} - 1px)) {
+      @content;
+    }
+  }
+}
+
+// ── 5. Convenience shorthands ────────────────────────────────────
+// These mirror Tailwind's naming so devs feel at home.
+
+@mixin xs  { @include respond-to('xs')  { @content; } }
+@mixin sm  { @include respond-to('sm')  { @content; } }
+@mixin md  { @include respond-to('md')  { @content; } }
+@mixin lg  { @include respond-to('lg')  { @content; } }
+@mixin xl  { @include respond-to('xl')  { @content; } }
+@mixin xxl { @include respond-to('2xl') { @content; } }
+@mixin xxxl{ @include respond-to('3xl') { @content; } }
+
+// Below shorthands
+@mixin below-sm  { @include respond-below('sm')  { @content; } }
+@mixin below-md  { @include respond-below('md')  { @content; } }
+@mixin below-lg  { @include respond-below('lg')  { @content; } }
+@mixin below-xl  { @include respond-below('xl')  { @content; } }
+@mixin below-2xl { @include respond-below('2xl') { @content; } }

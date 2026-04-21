@@ -1,0 +1,143 @@
+/* ============================================================
+   VC BRAND — COLOR VARIABLES
+   Logo: Gold on Black
+   ============================================================ */
+$font-display: "Red Rose", serif; // Hero titles, section headings
+$font-body: "DM Sans", sans-serif;
+
+@mixin gradient-text() {
+  background: linear-gradient(90deg, #A67C24, #F0CC70, #A67C24);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+:root {
+
+  /* ----------------------------------------------------------
+     PRIMARY — use these everywhere
+  ---------------------------------------------------------- */
+  --primary: #C8993A;
+  /* Brand gold — main usage            */
+  --primary-light: #F5D68A;
+  /* Lighter variant — hover, tints     */
+  --primary-dark: #A67C24;
+  /* Darker variant — pressed, shadows  */
+  --primary-faint: rgba(200, 153, 58, 0.12);
+  /* Ghost bg / tint   */
+  --primary-subtle: rgba(200, 153, 58, 0.30);
+  /* Soft border / bg  */
+
+  --primary-gradient: linear-gradient(135deg,
+      #C8993A 0%,
+      #F5D68A 40%,
+      #D4A843 75%,
+      #A67C24 100%);
+
+  /* ----------------------------------------------------------
+     GOLD PALETTE
+  ---------------------------------------------------------- */
+  --gold-50: #FDF6E3;
+  --gold-100: #FAE9B8;
+  --gold-200: #F5D68A;
+  /* Light gold — shimmer highlight     */
+  --gold-300: #ECC05C;
+  --gold-400: #D4A843;
+  /* Mid gold                           */
+  --gold-500: #C8993A;
+  /* Brand gold — PRIMARY               */
+  --gold-600: #A67C24;
+  /* Dark gold — hover states           */
+  --gold-700: #7A5510;
+  /* Deep gold — pressed / shadow       */
+  --gold-800: #4F3507;
+  --gold-900: #291A02;
+
+  /* ----------------------------------------------------------
+     BACKGROUND / NEUTRAL
+  ---------------------------------------------------------- */
+  --bg-primary: #0A0A0A;
+  /* Main page background           */
+  --bg-secondary: #111111;
+  /* Alternate section              */
+  --bg-surface:    #1A1A1A;
+  /* Cards / panels                 */
+  --bg-elevated: #242424;
+  /* Modals / dropdowns             */
+  --bg-overlay: rgba(0, 0, 0, 0.78);
+  /* Tooltips / overlays            */
+
+  /* ----------------------------------------------------------
+     TEXT
+  ---------------------------------------------------------- */
+  --text-primary: #FFFFFF;
+  --text-secondary: rgba(255, 255, 255, 0.65);
+  --text-tertiary: rgba(255, 255, 255, 0.35);
+  --text-disabled: rgba(255, 255, 255, 0.20);
+  --text-gold: #C8993A;
+  /* Gold label text               */
+  --text-gold-light: #F5D68A;
+  /* Gold text on dark cards       */
+  --text-on-gold: #1A0F00;
+  /* Dark text placed ON gold bg   */
+
+  /* ----------------------------------------------------------
+     BORDERS
+  ---------------------------------------------------------- */
+  --border-gold: #C8993A;
+  --border-gold-subtle: rgba(200, 153, 58, 0.30);
+  --border-gold-faint: rgba(200, 153, 58, 0.12);
+  --border-white-subtle: rgba(255, 255, 255, 0.10);
+  --border-white-faint: rgba(255, 255, 255, 0.06);
+
+  /* ----------------------------------------------------------
+     GRADIENTS
+  ---------------------------------------------------------- */
+
+  /* Buttons / CTAs — metallic shimmer */
+  --gradient-gold-shimmer: linear-gradient(135deg,
+      #C8993A 0%,
+      #F5D68A 40%,
+      #ECC05C 60%,
+      #D4A843 75%,
+      #A67C24 100%);
+
+  /* Headings — clip to text */
+  --gradient-gold-text: linear-gradient(90deg,
+      #A67C24 0%,
+      #F0CC70 35%,
+      #F5D68A 50%,
+      #F0CC70 65%,
+      #A67C24 100%);
+
+  /* Dividers / border lines */
+  --gradient-gold-vertical: linear-gradient(180deg,
+      #F5D68A 0%,
+      #C8993A 50%,
+      #7A5510 100%);
+
+  /* Hero section background glow */
+  --gradient-gold-glow: radial-gradient(ellipse 60% 40% at 50% 50%,
+      rgba(200, 153, 58, 0.18) 0%,
+      rgba(200, 153, 58, 0.06) 50%,
+      transparent 100%);
+
+  /* Hover shimmer sweep effect */
+  --gradient-gold-metallic: linear-gradient(105deg,
+      transparent 20%,
+      rgba(245, 214, 138, 0.35) 50%,
+      transparent 80%);
+
+  /* ----------------------------------------------------------
+     SHADOWS & GLOWS
+  ---------------------------------------------------------- */
+  --shadow-sm: 0 1px 4px rgba(0, 0, 0, 0.50);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.60);
+  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.70);
+
+  --shadow-gold-sm: 0 2px 12px rgba(200, 153, 58, 0.25);
+  --shadow-gold-md: 0 4px 24px rgba(200, 153, 58, 0.35);
+  --shadow-gold-lg: 0 8px 40px rgba(200, 153, 58, 0.45);
+  --shadow-gold-glow: 0 0 80px rgba(245, 214, 138, 0.20);
+
+}

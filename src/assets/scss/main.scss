@@ -1,0 +1,143 @@
+@use "./../../assets/scss/mixin.scss" as *;
+
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("../fonts/Poppins/Poppins-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("./../fonts/Poppins/Poppins-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("./../fonts/Poppins/Poppins-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("./../fonts/Poppins/Poppins-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+}
+
+body {
+  font-weight: 400;
+  line-height: 1.6;
+  background: #000;
+  color: var(--text-primary);
+  overflow-x: hidden;
+  font-family: "Red Rose", serif !important;
+
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  font-family: "Poppins";
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+// Global container class
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+
+  /* Small devices (≥640px) */
+  @media (min-width: 640px) {
+    max-width: 640px;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  /* Medium devices (≥768px) */
+  @media (min-width: 768px) {
+    max-width: 768px;
+  }
+
+  /* Large devices (≥1024px) */
+  @media (min-width: 1024px) {
+    max-width: 1024px;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  /* Extra Large (≥1280px) */
+  @media (min-width: 1280px) {
+    max-width: 1280px;
+  }
+
+  /* 2XL screens (≥1536px) */
+  @media (min-width: 1536px) {
+    max-width: 1536px;
+  }
+}
+
+
+
+.primary-btn {
+  background: var(--gradient-gold-shimmer);
+  background-size: 200% 200%;
+  background-position: 0% 50%;
+  color: #1a0f00;
+  border: none;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.primary-btn:hover {
+  background-position: 100% 50%;
+  box-shadow: 0 6px 28px rgba(200, 153, 58, 0.50);
+  transform: translateY(-2px);
+}
+
+/* Outline button */
+.primary-btn.outlined {
+  background: transparent;
+  border: 1.5px solid #C8993A;
+  color: #C8993A;
+}
