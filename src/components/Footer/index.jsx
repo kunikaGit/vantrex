@@ -22,8 +22,8 @@ const Footer = () => {
               <img src={image['logo.jpeg']} alt='logo' className='w-30'/>
             </h3>
             <p className="footer__brand-description">
-              ARC Funded is a prop firm backed by the globally recognized broker ARC Markets. 
-              At ARC Funded we aim to take on the prop trading space by providing sustainable 
+              VANTREX Funded is a prop firm backed by the globally recognized broker VANTREX Markets. 
+              At VANTREX Funded we aim to take on the prop trading space by providing sustainable 
               trading challenges that empower traders with top tier customer service, industry 
               leading technology, and efficient payouts, all managed by a team of CFD professionals 
               with 20+ years of combined industry experience.
@@ -126,14 +126,14 @@ const Footer = () => {
         {/* Disclaimer */}
         <div className="footer__disclaimer">
           <p className="footer__disclaimer-text">
-            ARC.Funded is owned and operated by ARC Markets (SVG) LLC (2090 LLC 2022), Euro House, Richmond Hill Road, P.O Box 2897, Kingstown, Saint Vincent and the Grenadines VC0100. Treasury services are facilitated by BBF Treasury Pty Ltd. The content of this website is not intended for residents of any country where its distribution would contravene local laws. ARC.Funded offers only virtual accounts to all users within its challenges. Funds paid to ARC.Funded do not constitute client money and are a subscription paid to ARC.Funded to participate in trading challenges. Trading on Margin Carries High Risk.
+            VANTREX.Funded is owned and operated by VANTREX Markets (SVG) LLC (2090 LLC 2022), Euro House, Richmond Hill Road, P.O Box 2897, Kingstown, Saint Vincent and the Grenadines VC0100. Treasury services are facilitated by BBF Treasury Pty Ltd. The content of this website is not intended for residents of any country where its distribution would contravene local laws. VANTREX.Funded offers only virtual accounts to all users within its challenges. Funds paid to VANTREX.Funded do not constitute client money and are a subscription paid to VANTREX.Funded to participate in trading challenges. Trading on Margin Carries High Risk.
           </p>
         </div>
 
         {/* Bottom Section */}
         <div className="footer__bottom">
           <p className="footer__bottom-copyright">
-            © 2025 ARC.Funded. All rights reserved.
+            © 2025 VANTREX.Funded. All rights reserved.
           </p>
           <div className="footer__bottom-links">
             <Link to="/privacy-policy" className="footer__bottom-link">Privacy Policy</Link>

@@ -344,7 +344,7 @@ const TradingPlans = () => {
                     <span className="trading-plans-new__feature-icon"><Clock/></span>
                     <div className="trading-plans-new__feature-text">
                       <span className="trading-plans-new__feature-title">Funded Stage</span>
-                      <span className="trading-plans-new__feature-subtitle">ARC Funded Traders</span>
+                      <span className="trading-plans-new__feature-subtitle">VANTREX Funded Traders</span>
                     </div>
                   </div>
                   {accountSizes.map((size) => (
@@ -386,7 +386,7 @@ const TradingPlans = () => {
                   <span className="trading-plans-new__feature-icon">🎯</span>
                   <div className="trading-plans-new__feature-text">
                     <span className="trading-plans-new__feature-title">Profit Target</span>
-                    <span className="trading-plans-new__feature-subtitle">ARC Funded Traders</span>
+                    <span className="trading-plans-new__feature-subtitle">VANTREX Funded Traders</span>
                   </div>
                 </div>
                 {accountSizes.map((size) => (

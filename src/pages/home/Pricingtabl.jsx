@@ -37,7 +37,7 @@ const PRICING_DATA = {
         title: "Two Phase – Classic, 2 steps",
         originalPrice: "$29",
         discountedPrice: "$26",
-        coupon: "ARC10",
+        coupon: "VANTREX10",
         phases: ["Phase 1", "Phase 2", "Funded"],
         features: [
           { label: "Profit Target",        value: "$250",  badge: "5%"  },
@@ -64,7 +64,7 @@ const PRICING_DATA = {
         title: "Two Phase – Classic, 2 steps",
         originalPrice: "$75",
         discountedPrice: "$70.50",
-        coupon: "ARC10",
+        coupon: "VANTREX10",
         phases: ["Phase 1", "Phase 2", "Funded"],
         features: [
           { label: "Profit Target",        value: "$750",  badge: "5%"  },
@@ -91,7 +91,7 @@ const PRICING_DATA = {
         title: "Two Phase – Classic, 2 steps",
         originalPrice: "$129",
         discountedPrice: "$121.50",
-        coupon: "ARC10",
+        coupon: "VANTREX10",
         phases: ["Phase 1", "Phase 2", "Funded"],
         features: [
           { label: "Profit Target",        value: "$1,250", badge: "5%"  },
@@ -118,7 +118,7 @@ const PRICING_DATA = {
         title: "Two Phase – Classic, 2 steps",
         originalPrice: "$249",
         discountedPrice: "$234",
-        coupon: "ARC10",
+        coupon: "VANTREX10",
         phases: ["Phase 1", "Phase 2", "Funded"],
         features: [
           { label: "Profit Target",        value: "$2,500", badge: "5%"  },
@@ -145,7 +145,7 @@ const PRICING_DATA = {
         title: "Two Phase – Classic, 2 steps",
         originalPrice: "$489",
         discountedPrice: "$459",
-        coupon: "ARC10",
+        coupon: "VANTREX10",
         phases: ["Phase 1", "Phase 2", "Funded"],
         features: [
           { label: "Profit Target",        value: "$5,000", badge: "5%"  },
@@ -172,7 +172,7 @@ const PRICING_DATA = {
         title: "Two Phase – Classic, 2 steps",
         originalPrice: "$969",
         discountedPrice: "$909",
-        coupon: "ARC10",
+        coupon: "VANTREX10",
         phases: ["Phase 1", "Phase 2", "Funded"],
         features: [
           { label: "Profit Target",        value: "$10,000", badge: "5%"  },
@@ -202,7 +202,7 @@ const PRICING_DATA = {
         title: "Two Phase – Standard, 2 steps",
         originalPrice: "$29",
         discountedPrice: "$26",
-        coupon: "ARC10",
+        coupon: "VANTREX10",
         phases: ["Phase 1", "Phase 2", "Funded"],
         features: [
           { label: "Profit Target",          value: "$500",  badge: "10%" },
@@ -230,7 +230,7 @@ const PRICING_DATA = {
         title: "Two Phase – Standard, 2 steps",
         originalPrice: "$75",
         discountedPrice: "$70.50",
-        coupon: "ARC10",
+        coupon: "VANTREX10",
         phases: ["Phase 1", "Phase 2", "Funded"],
         features: [
           { label: "Profit Target",          value: "$1,500", badge: "10%" },
@@ -258,7 +258,7 @@ const PRICING_DATA = {
         title: "Two Phase – Standard, 2 steps",
         originalPrice: "$129",
         discountedPrice: "$121.50",
-        coupon: "ARC10",
+        coupon: "VANTREX10",
         phases: ["Phase 1", "Phase 2", "Funded"],
         features: [
           { label: "Profit Target",          value: "$2,500", badge: "10%" },
@@ -286,7 +286,7 @@ const PRICING_DATA = {
         title: "Two Phase – Standard, 2 steps",
         originalPrice: "$249",
         discountedPrice: "$234",
-        coupon: "ARC10",
+        coupon: "VANTREX10",
         phases: ["Phase 1", "Phase 2", "Funded"],
         features: [
           { label: "Profit Target",          value: "$5,000", badge: "10%" },
@@ -314,7 +314,7 @@ const PRICING_DATA = {
         title: "Two Phase – Standard, 2 steps",
         originalPrice: "$489",
         discountedPrice: "$459",
-        coupon: "ARC10",
+        coupon: "VANTREX10",
         phases: ["Phase 1", "Phase 2", "Funded"],
         features: [
           { label: "Profit Target",          value: "$10,000", badge: "10%" },
@@ -342,7 +342,7 @@ const PRICING_DATA = {
         title: "Two Phase – Standard, 2 steps",
         originalPrice: "$969",
         discountedPrice: "$909",
-        coupon: "ARC10",
+        coupon: "VANTREX10",
         phases: ["Phase 1", "Phase 2", "Funded"],
         features: [
           { label: "Profit Target",          value: "$20,000", badge: "10%" },
@@ -758,7 +758,7 @@ export default function PricingSection() {
                 <span className={styles.promoHighlight}>Special Discount Available</span>
                 {" "}on Two Phase challenges
               </span>
-              <span className={styles.couponBadge}>ARC10</span>
+              <span className={styles.couponBadge}>VANTREX10</span>
             </div>
           )}
         </div>

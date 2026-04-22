@@ -158,22 +158,22 @@ const Home = () => {
           <div className="home3-content">
             {/* Title — GSAP entrance ref */}
             <h1 className="home3-title" ref={heroTitleRef}>
-              <span className="home3-title-highlight">ARC</span> Built for{' '}
+              <span className="home3-title-highlight">VANTREX</span> Built for{' '}
               <span className="home3-title-highlight">Traders</span>
               <br />
-              <span className='breaked-text'>Backed by Professionals!</span>
+              <span className=''>Backed by Professionals!</span>
             </h1>
 
             {/* Paragraph — SplitType char animation */}
             <div className="para" ref={textRef}>
               Master your trading skills on our simulated trading platform,
-              improve your trading on a demo ARC Account with up to $300,000 and
+              improve your trading on a demo VANTREX Account with up to $300,000 and
               get a reward of up to 90% of your simulated profits
             </div>
 
             {/* CTA Buttons */}
             <div className="cta" ref={heroBtnRef}>
-              <button className="home3-cta-button primary-btn">ARC CHALLENGE</button>
+              <button className="home3-cta-button primary-btn">VANTREX CHALLENGE</button>
               <button className="home3-cta-button bordered">Go To Dashboard</button>
             </div>
 

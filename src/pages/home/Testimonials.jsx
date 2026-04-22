@@ -4,7 +4,7 @@ import './Testimonials.scss';
 const testimonials = [
   {
     id: 1,
-    quote: "ARC completely changed how I approach prop trading. The one-phase challenge is straightforward and the 90% profit split is unmatched in the industry.",
+    quote: "VANTREX completely changed how I approach prop trading. The one-phase challenge is straightforward and the 90% profit split is unmatched in the industry.",
     name: "Marcus Thompson",
     designation: "Forex Trader · 3 years",
     avatar: "MT",
@@ -20,7 +20,7 @@ const testimonials = [
   },
   {
     id: 3,
-    quote: "After trying 4 other prop firms, ARC is the only one I stayed with. No hidden rules, real support, and freedom to trade my strategy without micromanagement.",
+    quote: "After trying 4 other prop firms, VANTREX is the only one I stayed with. No hidden rules, real support, and freedom to trade my strategy without micromanagement.",
     name: "Alejandro Ruiz",
     designation: "Scalper · 5 years",
     avatar: "AR",
@@ -36,7 +36,7 @@ const testimonials = [
   },
   {
     id: 5,
-    quote: "Transparent drawdown rules, EA support, and the ability to hold trades over the weekend — ARC treats traders like professionals.",
+    quote: "Transparent drawdown rules, EA support, and the ability to hold trades over the weekend — VANTREX treats traders like professionals.",
     name: "James O'Brien",
     designation: "Algorithmic Trader",
     avatar: "JO",
@@ -60,7 +60,7 @@ const testimonials = [
   },
   {
     id: 8,
-    quote: "I love that ARC supports TradingView. Being able to trade directly from my charts without switching platforms is a huge quality-of-life improvement.",
+    quote: "I love that VANTREX supports TradingView. Being able to trade directly from my charts without switching platforms is a huge quality-of-life improvement.",
     name: "Elena Kozlov",
     designation: "Technical Analyst",
     avatar: "EK",
@@ -84,7 +84,7 @@ const testimonials = [
   },
   {
     id: 11,
-    quote: "ARC's MT5 integration is seamless. I migrated my existing strategy without any modifications and hit my profit target on the first attempt.",
+    quote: "VANTREX's MT5 integration is seamless. I migrated my existing strategy without any modifications and hit my profit target on the first attempt.",
     name: "Lucas Ferreira",
     designation: "EA Developer & Trader",
     avatar: "LF",
@@ -92,7 +92,7 @@ const testimonials = [
   },
   {
     id: 12,
-    quote: "Unlike other firms, ARC doesn't penalize you for trading news. That freedom alone makes it the top choice for macro-based strategies.",
+    quote: "Unlike other firms, VANTREX doesn't penalize you for trading news. That freedom alone makes it the top choice for macro-based strategies.",
     name: "Yuki Tanaka",
     designation: "Macro Trader · Tokyo",
     avatar: "YT",

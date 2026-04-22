@@ -27,7 +27,7 @@ const Header = () => {
 
         {/* Logo */}
         <Link to="/" className="home3-header__logo">
-          <img src={image['logo.jpeg']} alt="ARC Logo" className="logo-img" />
+          <img src={image['logo.jpeg']} alt="VANTREX Logo" className="logo-img" />
         </Link>
 
         {/* Desktop Nav */}

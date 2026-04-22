@@ -30,10 +30,10 @@ const Rewards = () => {
                       <h4 className="rewards__step-title">Novice</h4>
                     </div>
                     <p className="rewards__step-description">
-                      The ARC Challenge educates traders and leads them to master their 
+                      The VANTREX Challenge educates traders and leads them to master their 
                       trading habits. Traders demonstrate their experience by following our 
                       Trading Objectives inspired by key risk management rules when 
-                      completing an ARC Challenge, traders move on to the Verification 
+                      completing an VANTREX Challenge, traders move on to the Verification 
                       step.
                     </p>
                   </div>
@@ -44,10 +44,10 @@ const Rewards = () => {
                       <h4 className="rewards__step-title">Expert Phase</h4>
                     </div>
                     <p className="rewards__step-description">
-                      The Verification step verifies the skills traders demonstrated in the ARC 
+                      The Verification step verifies the skills traders demonstrated in the VANTREX 
                       Challenge. The Trading Objectives are simplified, with the Profit Target 
                       being halved while the Maximum Loss Rules remain intact. Upon 
-                      passing it, traders get access to an ARC Account.
+                      passing it, traders get access to an VANTREX Account.
                     </p>
                   </div>
                 </div>
@@ -65,36 +65,36 @@ const Rewards = () => {
                 <Button className="rewards__button">Learn More</Button>
               </div>
 
-              {/* ARC Account Card */}
+              {/* VANTREX Account Card */}
               <div className="rewards__card rewards__card--large">
                 <div className="rewards__card-header">
-                  <h3 className="rewards__card-title">ARC Account</h3>
+                  <h3 className="rewards__card-title">VANTREX Account</h3>
                   <span className="rewards__badge rewards__badge--monetized">Monetized Demo</span>
                 </div>
 
                 <div className="rewards__step">
                   <div className="rewards__step-header">
                     <span className="rewards__step-number">Step 3</span>
-                    <h4 className="rewards__step-title">ARC Trader</h4>
+                    <h4 className="rewards__step-title">VANTREX Trader</h4>
                   </div>
                   <p className="rewards__step-description">
                     Advancing to another step demonstrates commitment and talent, 
-                    leading to an ARC Account with fictitious funds of up to $200,000 in a 
-                    demo environment. Despite being a demo, ARC Traders can be 
+                    leading to an VANTREX Account with fictitious funds of up to $200,000 in a 
+                    demo environment. Despite being a demo, VANTREX Traders can be 
                     rewarded for their performance with profits without risking their 
-                    capital and access exclusive opportunities, including the ARC Premium 
+                    capital and access exclusive opportunities, including the VANTREX Premium 
                     Programme.
                   </p>
                 </div>
               </div>
 
-              {/* ARC Account Summary Card */}
+              {/* VANTREX Account Summary Card */}
               <div className="rewards__card rewards__card--small">
-                <h3 className="rewards__card-title">ARC Account</h3>
+                <h3 className="rewards__card-title">VANTREX Account</h3>
                 <div className="rewards__features">
                   <div className="rewards__feature">
                     <span className="rewards__feature-icon">•</span>
-                    <span className="rewards__feature-text">ARC Account with fictitious funds up to $200,000</span>
+                    <span className="rewards__feature-text">VANTREX Account with fictitious funds up to $200,000</span>
                   </div>
                   <div className="rewards__feature">
                     <span className="rewards__feature-icon">•</span>
@@ -106,7 +106,7 @@ const Rewards = () => {
                   </div>
                   <div className="rewards__feature">
                     <span className="rewards__feature-icon">•</span>
-                    <span className="rewards__feature-text">ARC Premium Programme</span>
+                    <span className="rewards__feature-text">VANTREX Premium Programme</span>
                   </div>
                   <div className="rewards__feature">
                     <span className="rewards__feature-icon">•</span>

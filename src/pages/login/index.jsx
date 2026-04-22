@@ -58,7 +58,7 @@ const Login = () => {
       <div className="login-left" ref={leftPanelRef}>
         {/* Logo */}
         <Link to="/" className="login-logo">
-          <img src={image['logo.jpeg']} alt="ARC Logo" className="login-logo__img" />
+          <img src={image['logo.jpeg']} alt="VANTREX Logo" className="login-logo__img" />
         </Link>
 
         <div className="login-form-container">
@@ -190,7 +190,7 @@ const Login = () => {
         {/* <div className="login-right__image-wrap">
           <img
             src="/src/assets/images/login-illustration.png"
-            alt="ARC Trading Platform"
+            alt="VANTREX Trading Platform"
             className="login-right__image"
           />
         </div> */}
